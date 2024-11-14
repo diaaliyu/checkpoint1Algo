@@ -1,0 +1,24 @@
+ALGORITHM lire_une_phrase_terminant_par_un_point
+VAR
+    longueur,compte_mots,compte_voyelles: INTEGER;
+    i: CHAR;
+    longueur:=0;
+    compte_voyelles:=0;
+    compte_mots:=1;
+
+    
+BEGIN
+     REPEAT
+        Read(i)
+        longueur:=longueur+1;
+
+        IF (i=="e" OR i=="a" OR i=="u" OR i=="y" OR i=="o" OR i=="i" i=="E" OR i=="A" OR i=="U" OR i=="Y" OR i=="O" OR i=="I") THEN
+          compte_voyelles:=compte_voyelles+1;  
+        END_IF
+            IF (i==" ") THEN
+                compte_mots:=compte_mots+1;
+            END_IF
+
+     UNTIL (i==".")
+        Write(longueur,compte_voyelles,compte_mots)  
+END
